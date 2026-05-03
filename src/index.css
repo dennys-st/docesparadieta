@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,800&family=Inter:wght@400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    --background: 40 38% 96%;
+    --foreground: 25 35% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 25 35% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 25 35% 15%;
+
+    --primary: 22 65% 38%;
+    --primary-foreground: 40 38% 97%;
+    --primary-glow: 28 80% 55%;
+
+    --secondary: 95 25% 55%;
+    --secondary-foreground: 40 38% 97%;
+
+    --muted: 38 30% 92%;
+    --muted-foreground: 25 15% 40%;
+
+    --accent: 18 90% 58%;
+    --accent-foreground: 40 38% 97%;
+
+    --cream: 40 50% 94%;
+    --cream-deep: 38 40% 88%;
+    --sage: 95 22% 62%;
+    --sage-soft: 100 30% 90%;
+    --chocolate: 22 55% 22%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 40 38% 97%;
+
+    --border: 35 25% 85%;
+    --input: 35 25% 88%;
+    --ring: 22 65% 38%;
+
+    --radius: 1.25rem;
+
+    --gradient-warm: linear-gradient(135deg, hsl(var(--cream)) 0%, hsl(var(--sage-soft)) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(var(--accent)) 0%, hsl(18 95% 50%) 100%);
+    --gradient-hero: radial-gradient(ellipse at top right, hsl(var(--sage-soft)) 0%, hsl(var(--cream)) 60%);
+
+    --shadow-soft: 0 4px 20px -4px hsl(25 30% 25% / 0.08);
+    --shadow-card: 0 8px 30px -8px hsl(25 30% 25% / 0.12);
+    --shadow-cta: 0 10px 30px -8px hsl(var(--accent) / 0.45);
+    --shadow-glow: 0 20px 60px -20px hsl(var(--primary) / 0.3);
+
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html { scroll-behavior: smooth; }
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, h4 {
+    @apply font-display tracking-tight;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-warm { background: var(--gradient-warm); }
+  .bg-gradient-cta { background: var(--gradient-cta); }
+  .bg-gradient-hero { background: var(--gradient-hero); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-cta { box-shadow: var(--shadow-cta); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .transition-smooth { transition: var(--transition-smooth); }
+}
