@@ -9,9 +9,44 @@
     <meta property="og:description" content="Guia digital com receitas doces sem açúcar para o dia a dia." />
     <meta property="og:type" content="website" />
     <meta name="twitter:card" content="summary_large_image" />
+    
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '2099098570931537');
+    fbq('track', 'PageView');
+    </script>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Backredirect Script -->
+    <script>
+      (function(window, location) {
+        history.replaceState(null, document.title, location.pathname + "#!/back");
+        history.pushState(null, document.title, location.pathname);
+
+        window.addEventListener("popstate", function() {
+          if (location.hash === "#!/back") {
+            history.replaceState(null, document.title, location.pathname);
+            setTimeout(function(){
+              location.replace("http://localhost:5174/"); // Assuming the backredirect app runs on port 5174
+            }, 0);
+          }
+        }, false);
+      }(window, location));
+    </script>
   </head>
 
   <body>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=2099098570931537&ev=PageView&noscript=1"
+    /></noscript>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
