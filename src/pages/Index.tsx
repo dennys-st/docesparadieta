@@ -361,29 +361,16 @@ const Index = () => {
       <section className="py-16 md:py-28">
         <div className="container mx-auto px-4">
           <SectionTitle eyebrow="Prova social">Quem já testou, aprovou</SectionTitle>
-          <p className="text-center text-sm text-muted-foreground -mt-6 mb-10 italic px-4">
-            ⚠️ Espaços de depoimentos prontos — substitua o texto, nome, cidade e foto por reais.
-          </p>
-          <div className="grid md:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto">
-            {testimonials.map((i) => (
-              <Card key={i} className="p-6 sm:p-7 bg-card border-border/60 shadow-soft rounded-2xl flex flex-col">
-                <div className="flex gap-1 mb-4">
-                  {[...Array(5)].map((_, s) => <Star key={s} className="w-4 h-4 fill-accent text-accent" />)}
-                </div>
-                <p className="text-foreground/80 italic mb-6 leading-relaxed flex-1">
-                  "[Substitua por um depoimento real do cliente nº {i}.]"
-                </p>
-                <div className="flex items-center gap-3 pt-4 border-t border-border">
-                  <div className="relative w-14 h-14 rounded-full border-2 border-dashed border-primary/30 bg-sage-soft flex items-center justify-center shrink-0 overflow-hidden">
-                    <span className="text-chocolate font-display font-bold text-lg">{i}</span>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-chocolate">[Nome do cliente]</p>
-                    <p className="text-xs text-muted-foreground">[Cidade • Estado]</p>
-                  </div>
-                </div>
-              </Card>
-            ))}
+          <div className="grid md:grid-cols-3 gap-5 sm:gap-6 max-w-6xl mx-auto px-4">
+            <div className="rounded-2xl overflow-hidden shadow-soft hover:shadow-card transition-smooth bg-white flex items-center justify-center">
+              <img src="https://i.postimg.cc/qv0z7HCT/depoimento-1.avif" alt="Depoimento 1" className="w-full h-auto" />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-soft hover:shadow-card transition-smooth bg-white flex items-center justify-center">
+              <img src="https://i.postimg.cc/XY3pv6y6/depoimento-2.avif" alt="Depoimento 2" className="w-full h-auto" />
+            </div>
+            <div className="rounded-2xl overflow-hidden shadow-soft hover:shadow-card transition-smooth bg-white flex items-center justify-center">
+              <img src="https://i.postimg.cc/Vk1dNPbc/depoimento-3.avif" alt="Depoimento 3" className="w-full h-auto" />
+            </div>
           </div>
         </div>
       </section>
