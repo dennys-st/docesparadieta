@@ -35,7 +35,7 @@
           if (location.hash === "#!/back") {
             history.replaceState(null, document.title, location.pathname);
             setTimeout(function(){
-              location.replace("http://localhost:5174/"); // Assuming the backredirect app runs on port 5174
+              location.replace("https://docesparadieta-backredirect.vercel.app/"); // Production backredirect URL
             }, 0);
           }
         }, false);
